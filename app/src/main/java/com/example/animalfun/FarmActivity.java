@@ -31,7 +31,7 @@ public class FarmActivity extends AppCompatActivity {
         TextView res=(TextView) findViewById(R.id.textView3);
         mInstance=this;
 
-
+// testing
 
 //URL of the request we are sending
         String url = "https://api.api-ninjas.com/v1/animals?name=cheetah";

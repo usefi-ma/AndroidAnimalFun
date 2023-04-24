@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements ApiHandler.ApiCal
             }
         });
     }
+    //test
 
     public void loadMainMenu(View view) {
         Intent intent = new Intent(this, MainMenu.class);

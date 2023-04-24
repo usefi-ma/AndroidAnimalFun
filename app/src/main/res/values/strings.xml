@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AnimalFun</string>
+    <string name="category">Select a category!</string>
+    <string name="farmtext">Farm Friends</string>
+    <string name="oceantext">Ocean Friends</string>
+    <string name="foresttext">Forest Friends</string>
+    <string name="jungletext">Jungle Friends</string>
+</resources>

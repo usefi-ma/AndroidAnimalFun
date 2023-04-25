@@ -40,11 +40,11 @@ public class OceanAnimalInfo extends AppCompatActivity implements ApiHandler.Api
                 try {
                     JSONArray jsonArray = new JSONArray(response);
                     String name = jsonArray.getJSONObject(0).getString("name");
-                    JSONObject taxonomy = jsonArray.getJSONObject(0).getJSONObject("taxonomy");
-                    String kingdom = taxonomy.getString("kingdom");
+                    JSONObject characteristics = jsonArray.getJSONObject(0).getJSONObject("characteristics");
+                    String slogan = characteristics.getString("slogan");
 
                     animalName.setText(name);
-                    kingdomName.setText(kingdom);
+                    kingdomName.setText(slogan);
 
                 } catch (JSONException e) {
                     e.printStackTrace();

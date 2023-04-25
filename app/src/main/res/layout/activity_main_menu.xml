@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainMenu">
+    tools:context=".MainMenu"
+    android:background="@color/brown"
+    android:paddingBottom="30dp">
 
     <TextView
         android:id="@+id/textView2"
@@ -13,6 +21,8 @@
         android:layout_marginTop="32dp"
         android:text="@string/category"
         android:textSize="34sp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,10 +30,17 @@
     <Button
         android:id="@+id/btnFarm"
         android:layout_width="207dp"
-        android:layout_height="49dp"
+        android:layout_height="150dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/border_box_radius"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
         android:onClick="openFarm"
         android:text="@string/farmtext"
+        android:textAllCaps="false"
+        android:textColor="#050404"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -31,35 +48,54 @@
     <Button
         android:id="@+id/btnOcean"
         android:layout_width="207dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="18dp"
         android:onClick="openOcean"
+        android:textColor="#050404"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:gravity="center"
         android:text="@string/oceantext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnFarm" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFarm"
+        android:background="@drawable/border_box_radius"/>
 
     <Button
         android:id="@+id/btnForest"
         android:layout_width="202dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="18dp"
         android:onClick="openForest"
+        android:textColor="#050404"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:gravity="center"
         android:text="@string/foresttext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOcean" />
+        app:layout_constraintTop_toBottomOf="@+id/btnOcean"
+        android:background="@drawable/border_box_radius"/>
 
     <Button
         android:id="@+id/btnJungle"
         android:layout_width="198dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="18dp"
         android:onClick="openJungle"
+        android:textColor="#050404"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:gravity="center"
         android:text="@string/jungletext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnForest" />
+        app:layout_constraintTop_toBottomOf="@+id/btnForest"
+        android:background="@drawable/border_box_radius"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

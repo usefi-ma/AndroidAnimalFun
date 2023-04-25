@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity implements ApiHandler.ApiCal
         apiResponseAnimal = findViewById(R.id.animalText);
         apiResponseKingdom = findViewById(R.id.kingdomText);
 
-        start.setOnClickListener(new View.OnClickListener(){
+      /*  start.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 ApiHandler apiHandler = new ApiHandler();
                 apiHandler.makeApiCall("Cheetah", MainActivity.this);
             }
-        });
+        });*/
     }
 
     public void loadMainMenu(View view) {

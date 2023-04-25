@@ -20,6 +20,10 @@
         <activity
             android:name=".JungleActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".OceanAnimalInfo"
+            android:exported="false" />
         <activity
             android:name=".ForestActivity"
             android:exported="false" />

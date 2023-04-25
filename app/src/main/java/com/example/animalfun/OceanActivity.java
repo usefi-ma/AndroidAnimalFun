@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class OceanActivity extends AppCompatActivity {
 
     ImageView seahorse;
+    ImageView starfish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +20,12 @@ public class OceanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_ocean);
 
         seahorse = findViewById(R.id.seahorse);
-        seahorse.setOnClickListener(new View.OnClickListener(){
+        starfish = findViewById(R.id.starfish);
+        View.OnClickListener onClickListener = new View.OnClickListener(){
             @Override
             public void onClick(View v) {
 
-                String imageName = getResources().getResourceEntryName(seahorse.getId());
+                String imageName = getResources().getResourceEntryName(v.getId());
                 Log.d("OceanActivity", "imageName: "+ imageName);
                 ApiHandler apiHandler = new ApiHandler();
                 apiHandler.makeApiCall(imageName, new ApiHandler.ApiCallback() {
@@ -42,6 +44,8 @@ public class OceanActivity extends AppCompatActivity {
                     }
                 });
             }
-        });
+        };
+        seahorse.setOnClickListener(onClickListener);
+        starfish.setOnClickListener(onClickListener);
     }
 }

@@ -1,28 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OceanAnimalInfo">
+    android:fillViewport="true"
+>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        android:padding="20dp">
+
 
     <TextView
         android:id="@+id/animalName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="textView"
+        android:textColor="@color/brown"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_gravity="center" />
 
-    <TextView
-        android:id="@+id/kingdomName"
+     <TextView
+            android:id="@+id/kingdomNameTitle"
+            android:text="Kingdom :"
+         android:textColor="@color/brown"
+         android:textStyle="bold"
+         android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+      <TextView
+            android:id="@+id/kingdomName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="TextView"
+            app:layout_constraintTop_toBottomOf="@+id/animalName" />
+        <TextView
+            android:id="@+id/preyTitle"
+            android:text="Prey :"
+            android:textColor="@color/brown"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+        android:id="@+id/prey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
+        android:text="TextView"/>
+        <TextView
+            android:id="@+id/dietTitle"
+            android:text="Diet :"
+            android:textColor="@color/brown"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/diet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/animalName" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/distinctfeatureTitle"
+            android:text="Distinct Feature :"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/brown"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/distinctfeature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView" />
+        <TextView
+            android:id="@+id/habitatTitle"
+            android:text="Habitat :"
+            android:textColor="@color/brown"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/habitat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView" />
+
+    </LinearLayout>
+</ScrollView>

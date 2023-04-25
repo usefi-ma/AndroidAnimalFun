@@ -16,7 +16,10 @@ public class OceanAnimalInfo extends AppCompatActivity implements ApiHandler.Api
 
     TextView animalName;
     TextView kingdomName;
-
+    TextView Prey;
+    TextView Diet;
+    TextView DistinctFeature;
+    TextView Habitat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -25,6 +28,10 @@ public class OceanAnimalInfo extends AppCompatActivity implements ApiHandler.Api
 
         animalName = findViewById(R.id.animalName);
         kingdomName = findViewById(R.id.kingdomName);
+        Prey = findViewById(R.id.prey);
+        Diet = findViewById(R.id.diet);
+        DistinctFeature = findViewById(R.id.distinctfeature);
+        Habitat = findViewById(R.id.habitat);
 
         String name = getIntent().getStringExtra("animalName");
         Log.d("OceanAnimalInfo", "Name: " + name);
@@ -42,9 +49,18 @@ public class OceanAnimalInfo extends AppCompatActivity implements ApiHandler.Api
                     String name = jsonArray.getJSONObject(0).getString("name");
                     JSONObject characteristics = jsonArray.getJSONObject(0).getJSONObject("characteristics");
                     String slogan = characteristics.getString("slogan");
+                    String prey = characteristics.getString("main_prey");
+                    String diet = characteristics.getString("diet");
+                    String distinctfeature = characteristics.getString("distinctive_feature");
+                    String habitat = characteristics.getString("habitat");
+
 
                     animalName.setText(name);
                     kingdomName.setText(slogan);
+                    Prey.setText(prey);
+                    Diet.setText(diet);
+                    DistinctFeature.setText(distinctfeature);
+                    Habitat.setText(habitat);
 
                 } catch (JSONException e) {
                     e.printStackTrace();

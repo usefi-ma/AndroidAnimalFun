@@ -16,9 +16,6 @@
         <activity
 
             android:name=".FarmInfo"
-
-            android:name=".OceanAnimalInfo"
-
             android:exported="false" />
         <activity
             android:name=".JungleActivity"

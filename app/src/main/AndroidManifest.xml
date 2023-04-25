@@ -41,6 +41,8 @@
         <activity
             android:name=".MainMenu"
             android:exported="false" />
+        <activity android:name=".OceanAnimalInfo"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

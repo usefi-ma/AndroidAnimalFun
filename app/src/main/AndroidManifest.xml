@@ -14,7 +14,11 @@
         android:theme="@style/Theme.AnimalFun"
         tools:targetApi="31">
         <activity
+
+            android:name=".FarmInfo"
+
             android:name=".OceanAnimalInfo"
+
             android:exported="false" />
         <activity
             android:name=".JungleActivity"

@@ -11,37 +11,31 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class FarmInfo extends AppCompatActivity implements ApiHandler.ApiCallback {
+public class ForestAnimalInfo extends AppCompatActivity implements ApiHandler.ApiCallback{
 
-    TextView animalName;
-    TextView kingdomName;
-    TextView slogan;
-    TextView prey;
+    TextView forestAnimalName;
+    TextView forestAnimalSlogan;
+    TextView forestDF;
     TextView diet;
-
-    TextView df;
+    TextView prey;
     TextView habitat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_farm_info);
+        setContentView(R.layout.activity_forest_animal_info);
 
-        animalName = findViewById(R.id.animalNameFarm);
-        kingdomName = findViewById(R.id.kingdomNameFarm);
-        slogan = findViewById(R.id.farmSlogan);
-        prey = findViewById(R.id.farmPrey);
-        diet = findViewById(R.id.farmDiet);
-        df = findViewById(R.id.farmDf);
-        habitat = findViewById(R.id.farmHabitat);
-
-
+        forestAnimalName = findViewById(R.id.forestAnimalName);
+        forestAnimalSlogan = findViewById(R.id.forestAnimalSlogan);
+        forestDF = findViewById(R.id.forestDF);
+        diet = findViewById(R.id.diet);
+        prey = findViewById(R.id.prey);
+        habitat = findViewById(R.id.habitat);
 
         String name = getIntent().getStringExtra("animalName");
-        Log.d("FarmInfo", "Name: " + name);
+        Log.d("OceanAnimalInfo", "Name: " + name);
         ApiHandler apiHandler = new ApiHandler();
-        apiHandler.makeApiCall(name, FarmInfo.this);
+        apiHandler.makeApiCall(name, ForestAnimalInfo.this);
     }
 
     @Override
@@ -51,22 +45,21 @@ public class FarmInfo extends AppCompatActivity implements ApiHandler.ApiCallbac
             public void run() {
                 try {
                     JSONArray jsonArray = new JSONArray(response);
-                    String Name = jsonArray.getJSONObject(0).getString("name");
+                    String name = jsonArray.getJSONObject(0).getString("name");
                     JSONObject characteristics = jsonArray.getJSONObject(0).getJSONObject("characteristics");
-                    String Slogan = characteristics.getString("slogan");
-                    String Prey = characteristics.getString("prey");
+                    String slogan = characteristics.getString("slogan");
+                    String DF = characteristics.getString("most_distinctive_feature");
                     String Diet = characteristics.getString("diet");
-                    String Distinctfeature = characteristics.getString("distinctive_feature");
+                    String Prey = characteristics.getString("prey");
                     String Habitat = characteristics.getString("habitat");
 
-                    animalName.setText(Name);
-                    slogan.setText(Slogan);
-                    prey.setText(Prey);
+
+                    forestAnimalName.setText(name);
+                    forestAnimalSlogan.setText(slogan);
+                    forestDF.setText(DF);
                     diet.setText(Diet);
-                    df.setText(Distinctfeature);
+                    prey.setText(Prey);
                     habitat.setText(Habitat);
-
-
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -80,7 +73,7 @@ public class FarmInfo extends AppCompatActivity implements ApiHandler.ApiCallbac
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(FarmInfo.this, "Error: " + message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ForestAnimalInfo.this, "Error: " + message, Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -47,7 +47,7 @@
         app:srcCompat="@drawable/tiger" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/owl"
         android:layout_width="320dp"
         android:layout_height="180dp"
         android:layout_marginBottom="25dp"
@@ -56,7 +56,7 @@
         app:srcCompat="@drawable/toucan" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/wolf"
         android:layout_width="320dp"
         android:layout_height="180dp"
         android:layout_marginBottom="25dp"

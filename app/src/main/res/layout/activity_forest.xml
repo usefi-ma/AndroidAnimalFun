@@ -1,68 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="@color/brown">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp">
+    tools:context=".ForestActivity">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Forest Friends"
-            android:textColor="@color/blue"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="?attr/actionBarSize"
-            android:layout_gravity="center"/>
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="25dp"
-        android:layout_gravity="center"
-        android:scaleType="fitXY"
+        android:id="@+id/bear"
+        android:layout_width="213dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/owl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/bear" />
 
     <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="25dp"
-        android:layout_gravity="center"
-        android:scaleType="fitXY"
+        android:id="@+id/owl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/wolf"
+        app:layout_constraintEnd_toEndOf="@+id/bear"
+        app:layout_constraintStart_toStartOf="@+id/wolf"
+        app:layout_constraintTop_toBottomOf="@+id/bear"
         app:srcCompat="@drawable/owl" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="25dp"
-        android:layout_gravity="center"
-        android:scaleType="fitXY"
+        android:id="@+id/wolf"
+        android:layout_width="186dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/red_panda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owl"
         app:srcCompat="@drawable/wolf" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="320dp"
-        android:layout_height="180dp"
-        android:layout_marginBottom="25dp"
-        android:layout_gravity="center"
-        android:scaleType="fitXY"
+        android:id="@+id/red_panda"
+        android:layout_width="182dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="74dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wolf"
         app:srcCompat="@drawable/redpanda" />
-    </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

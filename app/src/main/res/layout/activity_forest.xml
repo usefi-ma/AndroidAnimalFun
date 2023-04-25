@@ -6,4 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".ForestActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="213dp"
+        android:layout_height="144dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bear"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="193dp"
+        android:layout_height="124dp"
+        app:srcCompat="@drawable/owl"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="244dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="186dp"
+        android:layout_height="115dp"
+        app:srcCompat="@drawable/wolf"
+        tools:layout_editor_absoluteX="119dp"
+        tools:layout_editor_absoluteY="408dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="182dp"
+        android:layout_height="101dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/redpanda"
+        tools:layout_editor_absoluteY="556dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

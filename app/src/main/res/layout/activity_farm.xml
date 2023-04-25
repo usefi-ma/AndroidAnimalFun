@@ -6,13 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".FarmActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="This is a cow"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="212dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cow" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="209dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/chicken"
+        tools:layout_editor_absoluteX="119dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="222dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/horse" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="231dp"
+        android:layout_height="154dp"
+        app:srcCompat="@drawable/pig"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="598dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="161dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
